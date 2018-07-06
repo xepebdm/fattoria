@@ -26,7 +26,7 @@ colgroup {background:#F60;}
 	
 
 	<tr>
-		<th>Id</th>	
+		<th>ID</th>	
 		<th>Nome</th>
 		<th>Preço</th>
 		<th>Quantidade</th>
@@ -37,7 +37,7 @@ colgroup {background:#F60;}
 		<tr>
 			<td>${produto.id}</td>
 			<td>${produto.nome}</td>
-			<td>${produto.preco}</td>
+			<td>R$ ${produto.preco}</td>
 			<td>${produto.quantidade}</td>
 			<td>${produto.data}</td>					
 		</tr>

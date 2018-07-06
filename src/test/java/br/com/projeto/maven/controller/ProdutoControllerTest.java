@@ -14,16 +14,16 @@ public class ProdutoControllerTest {
 	public void setUp() throws Exception {
 
 		Produto produto0 = new Produto("Café", 10.0, 2, "10-07-2018");
-		prodContrl.put(produto0);
+		prodContrl.adiciona(produto0);
 		
 		Produto produto1 = new Produto("Sorvete", 19.0, 1, "01-09-2017");
-		prodContrl.put(produto1);
+		prodContrl.adiciona(produto1);
 		
 		Produto produto2 = new Produto("Televisão", 900.50, 1, "30-04-2017");
-		prodContrl.put(produto2);
+		prodContrl.adiciona(produto2);
 		
 		Produto produto3 = new Produto("Celular", 700.99, 2, "20-01-2018");
-		prodContrl.put(produto3);
+		prodContrl.adiciona(produto3);
 	}
 
 	@Test
@@ -35,7 +35,7 @@ public class ProdutoControllerTest {
 	public void testEditaUmProduto() {
 		Produto produto = new Produto("Arroz", 3.0, 5, "15-12-2009");
 		
-		prodContrl.edit(1, produto);
+		prodContrl.edita(1, produto);
 		
 		assertEquals("Arroz", prodContrl.get(1).getNome());
 	}
@@ -46,9 +46,9 @@ public class ProdutoControllerTest {
 		Produto produto2 = new Produto("Máquina", 1000.00, 1, "10-01-2008");
 		Produto produto3 = new Produto("Roupa", 100.0, 4, "01-01-2006");
 		
-		prodContrl.edit(0, produto1);
-		prodContrl.edit(2, produto2);
-		prodContrl.edit(3, produto3);
+		prodContrl.edita(0, produto1);
+		prodContrl.edita(2, produto2);
+		prodContrl.edita(3, produto3);
 		
 		assertEquals("Máquina", prodContrl.get(2).getNome());
 		assertEquals("Roupa", prodContrl.get(3).getNome());
@@ -57,7 +57,7 @@ public class ProdutoControllerTest {
 
 	@Test
 	public void testRemoveUmProduto() {
-		prodContrl.invalidate(2);
+		prodContrl.deleta(2);
 		
 		assertEquals("Celular", prodContrl.get(2).getNome());
 		assertEquals(3, prodContrl.getProdutos().size());
@@ -67,8 +67,8 @@ public class ProdutoControllerTest {
 
 	@Test
 	public void testRemoveDoisProdutos() {
-		prodContrl.invalidate(0); //remove o indice produto0 = Cafe
-		prodContrl.invalidate(2); //remove o indice produto3 = Celular
+		prodContrl.deleta(0); //remove o indice produto0 = Cafe
+		prodContrl.deleta(2); //remove o indice produto3 = Celular
 		
 		assertEquals(0, prodContrl.get(0).getId());
 		assertEquals(1, prodContrl.get(1).getId());

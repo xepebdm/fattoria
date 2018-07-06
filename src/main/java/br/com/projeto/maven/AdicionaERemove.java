@@ -35,7 +35,7 @@ public class AdicionaERemove extends HttpServlet implements Serializable{
 		
 		Produto produto = new Produto(nome, preco, quantidade, dataDeCadastro);
 		
-		prdCntrl.edit(id,produto);
+		prdCntrl.edita(id,produto);
 		
 		session.setAttribute("produtos", prdCntrl);
 		

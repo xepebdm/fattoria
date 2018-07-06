@@ -26,7 +26,6 @@ public class RegistrarDados extends HttpServlet implements Serializable{
 		
 		HttpSession session = req.getSession();
 				
-//		prdCntrl = (ProdutoController) req.getAttribute("lista");
 		String nome = req.getParameter("nome");
 		double preco = Double.parseDouble(req.getParameter("preco"));
 		int quantidade = Integer.parseInt(req.getParameter("qtd"));
@@ -34,7 +33,7 @@ public class RegistrarDados extends HttpServlet implements Serializable{
 		
 		Produto produto = new Produto(nome, preco, quantidade, dataDeCadastro);
 		
-		prdCntrl.put(produto);
+		prdCntrl.adiciona(produto);
 		
 		session.setAttribute("produtos", prdCntrl);
 		

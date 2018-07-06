@@ -15,7 +15,7 @@ public class ProdutoController implements Serializable {
 	private int size = 0;
 
 	// adiciona produto no final lista
-	public void put(Produto produto) {
+	public void adiciona(Produto produto) {
 		produtos.add(size, produto);
 		produto.setId(size);
 		size++;
@@ -26,14 +26,14 @@ public class ProdutoController implements Serializable {
 	// primeiro remove o produto que existe no id
 	// define o id do novo produto
 	// adiciona o novo produto no id
-	public void edit(int id, Produto produto) {
+	public void edita(int id, Produto produto) {
 		produtos.remove(id);
 		produto.setId(id);
 		produtos.add(id, produto);
 	}
 
 	// remove produto pelo id e depois atualiza para ocupar o indice removido
-	public void invalidate(int id) {
+	public void deleta(int id) {
 		produtos.remove(id);
 
 		atualizaIndice(id);

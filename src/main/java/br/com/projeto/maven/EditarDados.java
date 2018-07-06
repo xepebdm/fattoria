@@ -35,7 +35,7 @@ public class EditarDados extends HttpServlet implements Serializable{
 		}
 		
 		Produto produto = prdCntrl.get(id);
-		prdCntrl.edit(id, produto);
+		prdCntrl.edita(id, produto);
 		
 		req.setAttribute("id", id);
 		req.setAttribute("produto", produto);

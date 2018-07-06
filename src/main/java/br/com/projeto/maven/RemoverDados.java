@@ -33,7 +33,7 @@ public class RemoverDados extends HttpServlet implements Serializable{
 		}
 		
 		
-		prdCntrl.invalidate(id);
+		prdCntrl.deleta(id);
 		
 		req.setAttribute("lista", prdCntrl);
 		
