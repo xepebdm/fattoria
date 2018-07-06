@@ -15,7 +15,7 @@ import br.com.projeto.maven.model.Produto;
  * A classe ainda está em contrução, não deve ser utilizada
  *
  */
-@Deprecated
+//@Deprecated
 public class TestaConexao {
 	public static void main(String[] args) {
 
