@@ -27,7 +27,7 @@ public class RemoverDados extends HttpServlet implements Serializable{
 		
 		int id = Integer.parseInt(req.getParameter("id"));
 		
-		if(id >= prdCntrl.getProdutos().size()) {
+		if(id >= prdCntrl.getProdutos().size() | id < 0) {
 			req.getRequestDispatcher("/WEB-INF/error.jsp").forward(req, resp);;
 			return;
 		}
