@@ -22,7 +22,7 @@ public class TestaConexao {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("produto");
 		EntityManager em = factory.createEntityManager();
 		
-//		Session sesion = HibernateUtil.openSession("root", "197601brasil");		
+//		Session sesion = HibernateUtil.openSession("root", "");		
 	
 		Produto produto = new Produto("Cafe", 4.0, 1, "10-05-2010");
 		
